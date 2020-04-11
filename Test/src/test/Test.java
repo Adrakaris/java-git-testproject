@@ -50,9 +50,25 @@ public class Test {
         names.push("Abbey");
         names.push("Bob");
         names.push("Carol");
+        // L = [Carol, Bob, Abbey]
 
-        System.out.println(names.pop());  // .remove() can also .pop()
+        // using an iterator and using WHILE
+        Iterator<String> it = names.iterator();  // returns Iterator<E>, parameterise
+        while (it.hasNext()) {  // print entry by entry with WHILE
+            System.out.println(it.next());
+        }
+
+        /*ListIterator<String> lit = names.listIterator();
+        lit.next(); lit.next(); lit.add("Zim");  // alt way of adding */
+
+        names.add(2, "Zim");
+        // enchanced for, FOREACH
+        for(String s : names) {
+            System.out.println(s);
+        }
+
+        /*System.out.println(names.pop());  // .remove() can also .pop()
         System.out.println(names.remove());  // but .remove can take an index for arg
-        System.out.println(names.removeFirst());  // can also
+        System.out.println(names.removeFirst());  // can also*/
     }
 }
