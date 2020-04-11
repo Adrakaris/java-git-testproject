@@ -1,3 +1,5 @@
+package areacalc;
+
 import java.util.Scanner;
 
 public class AreaCalc {
