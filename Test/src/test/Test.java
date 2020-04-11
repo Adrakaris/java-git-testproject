@@ -2,15 +2,12 @@ package test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Test {
-    public static void main(String[] args) throws FileNotFoundException {
-        // ARRAYS WITH USER INPUT
+    public static void main(String[] args) { //throws FileNotFoundException {
         /*
+        // ARRAYS WITH USER INPUT
         Scanner in = new Scanner(System.in);
 
         System.out.print("Enter size of array: ");
@@ -34,20 +31,28 @@ public class Test {
 
         // close scan
         in.close();
-         */
 
         // LISTS WITH FILE INPUT - because arrays are static
         Scanner in = new Scanner(new File("store.txt"));
-
-        List<String> store = new ArrayList<String>();  // list is the interface, arraylist is the implementation
-        // this whack
-
+        ArrayList<String> store = new ArrayList<String>();  // list is the interface, arraylist is the implementation // this whack
+        // ArrayList must meet all the requirements of List interface
+        // This is a collection - such as lists, sets, maps
         while (in.hasNextLine()) {
             store.add(in.nextLine());
         }
-
         System.out.println(store);
-        
+
         in.close();
+         */
+
+        LinkedList<String> names = new LinkedList<String>();
+        // add is as append, push is to put at head
+        names.push("Abbey");
+        names.push("Bob");
+        names.push("Carol");
+
+        System.out.println(names.pop());  // .remove() can also .pop()
+        System.out.println(names.remove());  // but .remove can take an index for arg
+        System.out.println(names.removeFirst());  // can also
     }
 }
